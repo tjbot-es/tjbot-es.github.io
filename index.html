@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123003509-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-123003509-1');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TJBot - El pequeño Robot de IBM con Inteligencia Artificial</title>
+    <meta name="description" content="TJBot es un pequeño robot de cartón o impreso en 3D, diseñado en IBM Labs, que puedes construir fácilmente por tu cuenta. Funciona en una Raspberry Pi y es una gran muestra de tecnologías modernas, como la Inteligencia Artificial, IoT, Cloud y más.">
+    <meta name="keywords" content="robot, IBM, artificial inteligence, AI, cloud, NodeJs, IoT, 3D print, TJBot, inteligencia artificial, IA, Raspberry Pi">
+    <meta name="robots" content="index, follow">
+    <meta name="DC.title" content="TJBot es un pequeño robot de cartón o impreso en 3D, diseñado en IBM Labs, que puedes construir fácilmente por tu cuenta.">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="files/css/bootstrap.min.css" >
+    <!-- Icon -->
+    <!-- <link rel="stylesheet" type="text/css" href="files/fonts/line-icons.css"> -->
+    <!-- Slicknav responsive mobile menu-->
+    <link rel="stylesheet" type="text/css" href="files/css/slicknav.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="files/css/nivo-lightbox.css" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="files/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="files/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="files/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Atma|Averia+Gruesa+Libre|Black+Ops+One|Chelsea+Market|Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+   </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+        <div class="container">
+          <!-- Video and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <!-- <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span> -->
+            </button>
+            <a href="https://www.youtube.com/embed/t0vdWKfEhd8?rel=0&amp;showinfo=0" class="navbar-video"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#acerca_de_mi">Acerca de mi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#habilidades">Mis Habilidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recetas">Mis Recetas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#componentes">Mis Componentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faqs">FAQs</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://watsonvaaclase.es">Watson va a Clase</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu">
+          <li>
+            <a class="page-scrool" href="#">Inicio</a>
+          </li>
+          <li>
+            <a class="page-scrool" href="#acerca_de_mi">Acerca de mi</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#habilidades">Mis Habilidades</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#recetas">Mis Recetas</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#componentes">Mis Componentes</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#faqs">FAQs</a>
+          </li>
+          <li>
+              <a class="page-scroll" href="http://watsonvaaclase.es">Watson va a Clase</a>
+            </li>
+        </ul>
+        <!-- Mobile Menu End -->
+      </nav>
+      <!-- Navbar End -->
+    <div class="spacer">
+      &nbsp;
+    </div>
+
+    <div class="banner">
+      <img src="files/img/tjbot-watson.png" class="center">
+     </div>
+      <div class="three-steps">
+            <h1 class="section-title wow fadeInUp">TJBOT &nbsp;en &nbsp;Español</h1>
+            <h2 class="wow fadeInUp">Sistema para utilizar servicios de Inteligencia Artificial de una forma divertida. <br> &nbsp; Fácilmente. &nbsp;En tres pasos.</h2>
+            <br> <br>
+            <p class="fadeInUp  wow" data-wow-delay="0.2s"></p>
+            <div class="row">
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                <h2>1.
+					<div class="btn wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="#componentes" class="btn btn-border">Constrúyeme</a>
+					</div>
+				</h2>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                  <h2>2.
+					<div class="btn wow fadeInUp" data-wow-delay="0.2s">
+					<a href="#habilidades" class="btn btn-border">Prográmame</a>
+					</div>
+				  </h2>
+              </div>
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                  <h2>3.
+					<div class="btn wow fadeInUp" data-wow-delay="0.2s">
+					<a href="#recetas" class="btn btn-border">Compártelo</a>
+					</div>
+				 </h2>
+              </div>
+            </div> <br><br>
+      </div>
+
+      <div class="manuals-area">
+        <div class="container">
+          <div class="manuals">
+            <div class="manuals-text">
+              <p>Mis GUíAS</p>
+            </div>
+            <div class="manuals-picture">
+              <a href="https://github.com/tjbot-es/tjbot/guias"><img src="./files/img/book.svg"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+
+    <!-- ACERCA DE MI Start-->
+    <section class="section-container-brown" id="acerca_de_mi">
+          <!-- Counter Item -->
+            <div >
+              <h1 class="section-title-white wow fadeInRight" data-wow-delay="0.3s">Acerca de Mi</h1>
+              <br>
+              <span><h3>Soy un pequeño robot con inteligencia artificial.<br><br>
+                Soy Open Source y he sido desarrollado en los laboratorios de investigación de IBM .<br><br>
+                Formo parte de un proyecto para introducir la IA en el currículo educativo de los estudiantes de Secundaria en España.<br><br>
+                Soy. . . TJBot.</h3></span>
+            </div>
+
+    </section>
+    <!-- ACERCA DE MI End-->
+
+
+
+     <!-- HABILIDADES Start -->
+    <section id="habilidades" class="section-container">
+
+        <div class="row">
+          <div class="col-12">
+              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">¿Cúales son mis Habilidades?</h1>
+          </div>
+        </div>
+
+        <div class="row padding-sides">
+          <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="0.2s">
+              <div class="icon">
+                <i class="material-icons">remove_red_eye</i>
+              </div>
+                <h3>VEO</h3>
+                <p>gracias al<br> servicio de Reconocimiento Visual de la Nube IBM.</p>
+            </div>
+          </div>
+          <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="0.4s">
+              <div class="icon">
+                <i class="material-icons">hearing</i>
+              </div>
+                <h3>OIGO</h3>
+                <p>gracias al<br> servicio de Voz a Texto de la Nube de IBM.</p>
+            </div>
+          </div>
+          <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="0.6s">
+              <div class="icon">
+                <i class="material-icons">record_voice_over</i>
+              </div>
+                <h3>HABLO</h3>
+                <p>gracias al servicio de Texto a Voz de IBM <br>y al Asistente Watson.</p>
+            </div>
+          </div>
+          <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="0.8s">
+              <div class="icon">
+                <i class="material-icons">pan_tool</i>
+              </div>
+                <h3>SALUDO</a></h3>
+                <p>como</p>
+                <p>un gato de la suerte chino.</p>
+            </div>
+          </div>
+           <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="1s">
+              <div class="icon">
+                <i class="material-icons">wb_sunny</i>
+              </div>
+                <h3>BRILLO</h3>
+                <p>con</p>
+                <p>mi LED.</p>
+            </div>
+          </div>
+           <!-- HABILIDADES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="habilidades wow fadeInDown" data-wow-delay="1.2s">
+              <div class="icon">
+                <i class="material-icons">edit</i>
+              </div>
+                <h3>HAGO</h3>
+                <p>cualquier cosa que me enseñes - así que date prisa,
+                <br> desarrolla una nueva receta.</p>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <!-- HABILIDADES End -->
+
+
+
+    <!-- RECETAS Start -->
+    <section id="recetas" class="section-container">
+      <div class="container">
+
+          <div class="col-12">
+             <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Mis Recetas</h1>
+          </div>
+
+        <div class="row">
+			
+          <!-- RECETAS item -->
+          <div class="col-xs-12 col-md-6 col-lg-3 padding-item">
+
+              <div class="recetas">
+                <h3><a href="https://github.com/tjbotcz/tjbotcz_lite" target="_blank">TJBot Básico</a></h3>
+                <p> Converso, reconozco cosas y personas que veo delante de mi y por supuesto saludo y brillo.</p>
+              </div>
+
+          </div>
+          <!-- RECETAS item -->
+          <div class="col-xs-12 col-md-6 col-lg-3 padding-item">
+
+              <div class="recetas">
+                <h3><a href="#">TJBot Avanzado</a></h3>
+                <p>Sobre la versión Básica reconozco caras, emociones y tengo un panel de control, una ventana de cha y estoy preparado para conectarme con dispositivos IoT a través de la plataforma Watson IoT.</p>
+              </div>
+
+          </div>
+          <!-- RECETAS item -->
+          <div class="col-xs-12 col-md-6 col-lg-3 padding-item">
+
+              <div class="recetas">
+                <h3><a href="#">Catalinita</a></h3>
+                <p>Una muñeca muy lista que ayuda a los niños/as con las matemática, sabe multiplicar y juega a piedra papel o tijera.</p>
+              </div>
+
+          </div>
+          <!-- RECETAS item -->
+          <div class="col-xs-12 col-md-6 col-lg-3 padding-item">
+
+              <div class="recetas">
+                <h3><a href="#">Tu receta</a></h3>
+                <p>Este espacio está reservado para tu receta.</p>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- RECETAS End -->
+
+
+
+    <!-- WATSON VA A CLASE Start-->
+    <section class="section-container-ltbrown" id="watson-va-a-clase">
+		<div >
+              <h2>Programa Watson va a Clase</h1>
+              <br>
+              <span><h3>Impulsado por el dpto de RSC de IBM, Watson va a clase es un programa pionero del área de la Ciudadanía Corporativa de IBM en España, <br>
+                cuyo principal objetivo es introducir la Inteligencia Artificial (IA) en el currículo educativo de los estudiantes de Secundaria.<br>
+                Se trata de que los alumnos comprendan y usen principios básicos de codificación y habilidades clave para la IA.<br>
+                Enseñamos a los profesores para que puedan incorporar estos contenidos en sus clases y así lograr un mayor impacto en los jóvenes.</h3></span>
+              <br>
+              <div class="btn wow fadeInUp" data-wow-delay="0.1s">
+                	<a href="http://watsonvaaclase.es" class="btn btn-solid">Conoce Más</a>
+			   </div>
+		</div>
+           
+    </section>
+    <!-- WATSON VA A CLASE End-->
+
+    <!-- COMPONENTES Start -->
+    <section id="componentes" class="section-container">
+
+
+          <div class="col-12">
+
+              <h1 class="section-title wow fadeInUp" data-wow-delay="0.2s">Mis Componentes</h1>
+
+          </div>
+        <div class="row padding-sides">
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/servo.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Servo Motor 9g</h3>
+                <p>Precio &nbsp 2,50 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Raspberry Pi 3 Modelo B</h3>
+                  <p>Precio &nbsp 39,90 €</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi-adapter.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Fuente Alimentación Raspberry Pi - 2.5A</h3>
+                  <p>Precio &nbsp 9,90 €</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+           <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/r-pi-camera.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>Cámara Raspberry Pi V2 8MP</h3>
+                  <p>Precio &nbsp 27,90 €</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/ledka.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                  <h3>LED RGB KY-016 (Keyes)</h3>
+                  <p>Precio &nbsp 0,26 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/8GB-sdhc.png" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Micro SDHC 8GB Clase 10</h3>
+                <p>Precio &nbsp 5,95 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+           <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/usb-mic.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Micrófono Mini Externo USB</h3>
+                <p>Precio &nbsp 3,95 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/kabel-ff.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Cable DuPont H-H (4x)</h3>
+                <p>Precio &nbsp 1 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/kabel-mf.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Cable DuPont M-H (3x)</h3>
+                <p>Precio &nbsp 1 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/mini-altavoces-usb.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Altavoz Externo USB</h3>
+                <p>Precio &nbsp 8,75 €</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/krabice.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>Caja Almacenaje A4 - Cartón</h3>
+                <p>Precio &nbsp 1,5€ </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMPONENTES item -->
+          <div class="col-md-6 col-lg-4 col-xs-12 padding-item">
+            <div class="componentes">
+              <div class="img-thumb">
+                <img class="img-fluid" src="files/img/karton.jpg" alt="">
+              </div>
+              <div class="overlay-box">
+                <h3>TJBot - Chasis </h3>
+                <p>Precio &nbsp 12 €</p>
+              </div>
+            </div>
+          </div>
+
+    </section>
+    <!-- COMPONENTES End -->
+
+
+    <!-- TIENDAS Start-->
+    <section class="section-container-brown" id="tiendas">
+        
+        <div class="section-title-white wow fadeInRight" data-wow-delay="0.3s">
+                <span><h2>Compra mis componentes en...</h2></span>
+              </div>
+          <div class="row padding-sides">
+			  <div class="col-md-6 col-lg-4 col-xs-12 padding-item">        
+				<div class="img-thumb">
+					<img class="img-fluid" src="files/img/kubii-logo.png" alt="">
+				</div>
+              </div>
+			  <div class="col-md-6 col-lg-4 col-xs-12 padding-item">        
+				<div class="img-thumb">
+					<img class="img-fluid" src="files/img/bricogeek.png" alt="">
+				</div>
+              </div>
+               <div class="col-md-6 col-lg-4 col-xs-12 padding-item">        
+				<div class="img-thumb">
+					<img class="img-fluid" src="files/img/chipspain.png" alt="">
+				</div>
+              </div>
+             
+             
+          </div>
+          
+    </section>
+      <!-- TIENDAS End-->
+
+    <!-- FAQS Start -->
+    <section id="faqs" class="section-container padding-sides">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h1 class="counter wow fadeInUp" data-wow-delay="0.2s">Preguntas Frecuentes</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+            <div class="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionOne" aria-expanded="true" aria-controls="collapseOne">
+                     <p>¿Porqué TJ?</p>
+                  </div>
+                </div>
+                <div id="questionOne" class="collapse" aria-labelledby="headingOne" data-parent="#question">
+                  <div class="card-body">
+                  <p>Tengo el nombre del primer presidente de IBM - Thomas John Watson, también conocido como T.J. Watson.</p>
+                </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <div class="header-title" data-toggle="collapse" data-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
+                     <p>¿Como construir un TJBot?</p>
+                    </div>
+                </div>
+                <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
+                  <div class="card-body">
+                    <p>Videos y tutoriales de como construirme están disponibles en el <a href=https://github.com/tjbot-es/tjbot/guias><b>Git</b></a> del proyecto.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
+                    <p>¿Puedes andar?</p>
+                  </div>
+                </div>
+                <div id="questionThree" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                  <div class="card-body">
+                    <p>No. De todas formas puedes diseñar tu propio chasis y ruedas, escribir una nueva receta y compartirla con otros para que se puedan beneficiar de mis movimientos :).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+            <div class="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne2">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionOne2" aria-expanded="true" aria-controls="collapseOne">
+                    <p>¿Puedo modificarlo?</p>
+                  </div>
+                </div>
+                <div id="questionOne2" class="collapse" aria-labelledby="headingOne" data-parent="#question">
+                  <div class="card-body">
+                    <p>Por supuesto. Sería genial si también compartes tus modificaciones. Las recetas básicas iniciales se encuentran en la sección <a href=#recetas><b>mis recetas</b>. </a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo2">
+                    <div class="header-title" data-toggle="collapse" data-target="#questionTwo2" aria-expanded="false" aria-controls="questionTwo">
+                      <p>¿Puedo conectarlo con otros servicios?</p>
+                    </div>
+                </div>
+                <div id="questionTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#question">
+                  <div class="card-body">
+                    <p>Claro, puedes conectarlo a cualquier servicio con REST API o puedes programar la conectividad tu mismo. Las recetas básicas usan IBM Cloud y los servicios de Watson debido a su modelo freemium. También puedes mejorar TJBot con hardware adicional, el cielo es el límite.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <div class="header-title" data-toggle="collapse" data-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
+                    <p>¿Hay alguna versión impresa en 3D?</p>
+                  </div>
+                </div>
+                <div id="questionFive" class="collapse" aria-labelledby="headingThree" data-parent="#question">
+                  <div class="card-body">
+                    <p>Si. Si tienes acceso a una impresora 3D, puedes descargar los modelos 3D desde el <a href=https://github.com/tjbot-es/tjbot/chasis><b>Git</b></a> del proyecto.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- FAQS End -->
+
+
+
+    <!-- FORMULARIO Start -->
+    <section class="section-container-ltbrown padding-sides" id="writeme">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="heading-count">
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.2s">¿Tienes alguna pregunta más? <br> ¡Estamos en contacto!</h2><br>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="formular">
+                <form action="https://formspree.io/abcabezas@es.ibm.com" method="POST">
+                  <label for="Surname">Tu nombre</label>
+                  <input class="surname" id="Surname" type="text" text="Surname" name="surname">
+                  <br>
+                  <label for="E-mail">Tu e-mail</label>
+                  <input class="email" id="Email" type="email" text="E-mail" name="email">
+                  <br>
+                  <label for="yourMessage">Tu mensaje</label>
+                  <textarea id="yourMessage" text="message" name="message"></textarea>
+                  <br>
+                  <button class="submit"><div class= "popisek">Enviar</div></button>
+                </form>
+              </div>
+            </div>
+      </section>
+      <!-- FORMULARIO End -->
+
+    <div id="copyright">
+      <div class="section-footer">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info">
+              <p>© Designed and Developed by <a href="http://uideck.com" rel="nofollow">UIdeck</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+    	<i class="lni-chevron-up"></i>
+    </a>
+
+    <div id="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="files/js/jquery-min.js"></script>
+    <script src="files/js/popper.min.js"></script>
+    <script src="files/js/bootstrap.min.js"></script>
+    <script src="files/js/jquery.countdown.min.js"></script>
+    <script src="files/js/jquery.nav.js"></script>
+    <script src="files/js/jquery.easing.min.js"></script>
+    <script src="files/js/wow.js"></script>
+    <script src="files/js/jquery.slicknav.js"></script>
+    <script src="files/js/nivo-lightbox.js"></script>
+    <script src="files/js/main.js"></script>
+  </body>
+</html>
